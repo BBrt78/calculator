@@ -5,17 +5,31 @@ import {Output} from "./output.js"
 
 function App() {
 
-    const [output, setOutput] = useState("");
+    const [output, setOutput] = useState([]);
     const [input, setInput] = useState([]);
+    
+    // useEffect(() => {
+    //     setOutput([...output, input]);
+    //   }, [input]);
 
     const addInput = (e) => {
         if (input.includes(".") && e.target.value === ".") {
         } else if (e.target.value === "+") {
-            setInput([...input, e.target.value, " "]);
+            setInput([...input, e.target.value]);
             setOutput([...output, input])
+            // setInput([])
         } else {
-            setInput([...input, e.target.value, " "])
+            setInput([...input, e.target.value]);
+            
         } console.log(input)
+    }
+
+    const clearAll = () => {
+        setOutput([]);
+        setInput([])
+    }
+
+    const clear = () => {
     }
    
     return (
@@ -26,8 +40,8 @@ function App() {
             </div>
 
             <div className="container2">
-                <button className="ca button-a" value="CA">CA</button>
-                <button className="c button-a" value="C">C</button>
+                <button className="ca button-a" value="CA" onClick={clearAll}>CA</button>
+                <button className="c button-a" value="C" onClick={clear}>C</button>
                 <button className="button-a" value="%" onClick={addInput}>%</button>
                 <button className="button-a" value="+" onClick={addInput}>+</button>
 
