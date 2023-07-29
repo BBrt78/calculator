@@ -1,0 +1,104 @@
+body {
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "1"
+    "2";
+  grid-template-columns: 295px;
+  grid-template-rows: 200px 300px;
+  justify-content: center;
+  margin: 50px
+}
+
+.container1 {
+  display: grid;
+  grid-area: 1;
+  grid-template-rows: 100px;
+}
+
+.container2 {
+  display: grid;
+  grid-area: 2;
+  grid-template-areas:
+    "1 1 1 1"
+    "2 2 2 2"
+    "3 3 3 3"
+    "4 4 4 4"
+    "5 5 5 5";
+  column-gap: 5px;
+  row-gap: 5px;
+  grid-template-columns: 70px 70px 70px 70px;
+}
+
+.button-a {
+  grid-area: 1;
+  background-color: black;
+  color: white;
+  border: white 1px solid;
+  border-radius: 7px;
+}
+
+.button-b {
+  grid-area: 2;
+  background-color: black;
+  color: white;
+  border: white 1px solid;
+  border-radius: 7px;
+}
+
+.button-c {
+  grid-area: 3;
+  background-color: black;
+  color: white;
+  border: white 1px solid;
+  border-radius: 7px;
+}
+
+.button-d {
+  grid-area: 4;
+  background-color: black;
+  color: white;
+  border: white 1px solid;
+  border-radius: 7px;
+}
+
+.button-e {
+  grid-area: 5;
+  background-color: black;
+  color: white;
+  border: white 1px solid;
+  border-radius: 7px;
+}
+
+.button-a:hover, .button-b:hover, .button-c:hover, .button-d:hover, .button-e:hover {
+  background-color: rgb(189, 189, 189);
+  color: black;
+  cursor: pointer;
+  border: black 1px solid;
+}
+
+.output {
+  color: rgb(255, 255, 255);
+  border: solid 1px black;
+  background-color: rgb(14, 95, 0);
+  padding: 15px;
+  margin: 10px 0px;
+  font-size: 30px;
+  border: white 1px solid;
+  text-align: right;
+}
+
+.input {
+  color: rgb(255, 255, 255);
+  border: solid 1px black;
+  background-color: rgb(58, 58, 58);
+  padding: 15px;
+  margin: 10px 0px;
+  font-size: 30px;
+  border: white 1px solid;
+  text-align: right;
+}
